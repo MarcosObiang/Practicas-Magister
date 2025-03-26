@@ -1,1 +1,1 @@
-from . import estate
+from . import estate,estate_propertiy_type

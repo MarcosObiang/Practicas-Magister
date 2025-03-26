@@ -5,20 +5,21 @@
 
     <data>
 
-        <record id="view_test_model_search" model="ir.ui.view">
-            <field name="name">test.model</field>
+        <record id="test_model_search" model="ir.ui.view">
+            <field name="name">test_model</field>
             <field name="model">test_model</field>
             <field name="arch" type="xml">
-                <search>
+                <search string ="Busca tu casa">
                     <field name="name" string="Name" />
                     <field name="postcode" string="Postcode" />
-                    <field name="selling_price" string="Selling Price" />
+                    <field name="state" string="State" />
 
-                    <filter string="Active" domain="[('active', '=', True)]"/>
-                    <filter string="Sold" domain="[('state', '=', 'sold')]"/>
-                    <filter string="New" domain="[('state', '=', 'new')]"/>
-
-
+                    <separator/>
+                    <filter string ="Propiedades disponibles" name ="state" domain="[ '|',('state','=', 'new'),('state','=','offer_recieved')]"></filter>
+                        <filter string = "Codigo postal" name="postcode" context="{'group_by':'postcode'}">
+                        
+                        </filter>
+             
                 </search>
             </field>
         </record>

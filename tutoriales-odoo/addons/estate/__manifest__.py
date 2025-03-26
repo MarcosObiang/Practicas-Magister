@@ -10,13 +10,14 @@
     "installable": True,
     "application": True,
     "auto_install": False,
-    "data":[
+    "data": [
         "security/ir.model.access.csv",
-        "views/estate_property_views.xml",
         "views/estate_menus.xml",
         "views/estate_fields_list.xml",
         "views/form_fields.xml",
-        "views/search_field.xml"
-
-    ]
+        "views/search_field.xml",
+        "views/estate_property_views.xml",
+        "views/settings_property_view.xml",
+        "views/porperty_types_list.xml"
+    ],
 }

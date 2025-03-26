@@ -5,8 +5,9 @@
     <field name="name">Test action</field>
     <field name="res_model">test_model</field>
     <field name="view_mode">tree,form</field>
-    <field name="search_view_id" ref= "view_test_model_search"></field>
+    <field name="search_view_id" ref= "test_model_search"></field>
 </record>
+
 
 
 </odoo>

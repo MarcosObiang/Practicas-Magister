@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+
+<odoo>
+
+    <data>
+
+        <record id="view_properties_tree" model ="ir.ui.view">
+            <field name="name">property types list</field>
+            <field name="model">property_type</field>
+            <field name="arch" type= "xml">
+
+                <tree string="test">
+
+
+                    <field name="partner_id" />
+
+                </tree>
+
+            </field>
+
+        </record>
+    </data>
+
+
+</odoo>

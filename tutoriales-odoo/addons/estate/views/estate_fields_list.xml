@@ -9,7 +9,15 @@
                 <tree string="Tests">
                     <field name="name" />
                     <field name="description" />
+                    <field name="postcode"></field>
                     <field name="state"></field>
+                    <field name="expected_price"></field>
+                    <field name="selling_price"></field>
+                    <field name="bedrooms"></field>
+                    <field name="living_area"></field>
+                    <field name="garden_area"></field>
+                    <field name="garden"></field>
+                    
                 </tree>
             </field>
         </record>

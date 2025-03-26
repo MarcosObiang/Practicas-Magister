@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+
+<odoo>
+
+    <record id="property_type_action" model="ir.actions.act_window">
+        <field name="name"> Settings</field>
+        <field name="res_model">property_type</field>
+        <field name="view_mode"> tree</field>
+
+
+    </record>
+
+
+</odoo>
