@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+
+
+<odoo>
+
+    <data>
+
+        <record id="view_test_model_search" model="ir.ui.view">
+            <field name="name">test.model</field>
+            <field name="model">test_model</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="name" string="Name" />
+                    <field name="postcode" string="Postcode" />
+                    <field name="selling_price" string="Selling Price" />
+
+                    <filter string="Active" domain="[('active', '=', True)]"/>
+                    <filter string="Sold" domain="[('state', '=', 'sold')]"/>
+                    <filter string="New" domain="[('state', '=', 'new')]"/>
+
+
+                </search>
+            </field>
+        </record>
+
+    </data>
+
+</odoo>

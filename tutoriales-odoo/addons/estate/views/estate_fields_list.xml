@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+
+<odoo>
+    <data>
+        <record id="view_test_tree" model="ir.ui.view">
+            <field name="name">Test Tree View</field>
+            <field name="model">test_model</field>
+            <field name="arch" type="xml">
+                <tree string="Tests">
+                    <field name="name" />
+                    <field name="description" />
+                    <field name="state"></field>
+                </tree>
+            </field>
+        </record>
+    </data>
+</odoo>
