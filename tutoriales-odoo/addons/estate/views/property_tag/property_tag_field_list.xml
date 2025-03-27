@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+
+
+<odoo>
+    <data>
+
+
+        <record id="property_tag_field_list" model="ir.ui.view">
+            <field name="name">Tags list</field>
+            <field name="model">property_tag</field>
+            <field name="arch" type="xml">
+
+                <tree>
+
+                    <field name="tag"></field>
+
+
+                </tree>
+
+
+            </field>
+
+
+        </record>
+
+    </data>
+
+
+</odoo>

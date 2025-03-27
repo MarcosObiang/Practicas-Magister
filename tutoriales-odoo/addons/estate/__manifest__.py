@@ -12,12 +12,17 @@
     "auto_install": False,
     "data": [
         "security/ir.model.access.csv",
-        "views/estate_menus.xml",
-        "views/estate_fields_list.xml",
-        "views/form_fields.xml",
-        "views/search_field.xml",
-        "views/estate_property_views.xml",
-        "views/settings_property_view.xml",
-        "views/porperty_types_list.xml"
+
+        "views/estate/estate_fields_list.xml",
+        "views/estate/estate_form_fields.xml",
+        "views/estate/estate_search_field.xml",
+        "views/estate/estate_property_views.xml",
+        "views/property_type/settings_property_view.xml",
+        "views/property_type/porperty_types_list.xml",
+        "views/property_tag/property_tag_field_list.xml",
+        "views/property_tag/property_tag_main_action.xml",
+
+        "views/root_menu.xml",
+
     ],
 }

@@ -5,5 +5,5 @@ class PropertyType(models.Model):
     _name="property_type"
     _description="holds the type of properties available"
 
-    partner_id= fields.Char("Compa",required =True)
+    property_type= fields.Char("Property type", required=True,default="Sweet Home")
 

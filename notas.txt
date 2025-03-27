@@ -1,1 +1,5 @@
 -Con mas confianza, pero he intentado añadir una nueva ruta desde el menú y ni siquiera se muetran ambos botones
+- Ya se muestran los botones, avanzando mas rapido y con mas confianza
+- acabo de perder casi 40 minutos por no saber que el orden de los archivos importa en el manifest, 
+-otro buen rato perdido porque solo puse  widget="many2many_tags"  en una de las 2 etiquetas que necesitaban mostrar esta relacion muchos a muchos
+y la excepcion que lanzaba no era para nada de ayuda

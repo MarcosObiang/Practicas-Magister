@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+
+
+<odoo>
+
+    <data>
+
+        <record id="property_tag_main_action_id" model="ir.actions.act_window">
+            <field name="name">Tag</field>
+            <field name="res_model">property_tag</field>
+            <field name="view_mode">tree,form</field>
+
+
+        </record>
+
+
+    </data>
+
+
+</odoo>

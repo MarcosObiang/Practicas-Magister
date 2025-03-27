@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+
+<odoo>
+
+<data>
+
+    <record id="estate.property_type_action" model="ir.actions.act_window">
+        <field name="name">Propiedades</field>
+        <field name="res_model">property_type</field>
+        <field name="view_mode">tree,form</field>
+
+
+    </record>
+</data>
+
+
+</odoo>
