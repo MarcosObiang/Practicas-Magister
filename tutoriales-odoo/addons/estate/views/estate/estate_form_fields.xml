@@ -41,9 +41,15 @@
                                         <field name="active" />
                                         <field name="buyer_id" />
                                         <field name="salesman_id" />
-                                         <field name="property_type_id.type" />
-                                        <field name="property_tag_ids.tag" widget="many2many_tags" />
+                                        <field name="property_type_id" />
+                                        <field name="property_tag_ids" widget="many2many_tags" />
+                                        <field name="offers_ids" widget="one2many_list" />
                                     </group>
+                                </page>
+
+                                <page string="Offers">
+
+                                    <field name="offers_ids" widget="one2many_list" />
                                 </page>
                             </notebook>
                         </group>

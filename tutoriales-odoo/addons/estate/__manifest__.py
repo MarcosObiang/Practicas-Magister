@@ -12,7 +12,6 @@
     "auto_install": False,
     "data": [
         "security/ir.model.access.csv",
-
         "views/estate/estate_fields_list.xml",
         "views/estate/estate_form_fields.xml",
         "views/estate/estate_search_field.xml",
@@ -21,8 +20,8 @@
         "views/property_type/porperty_types_list.xml",
         "views/property_tag/property_tag_field_list.xml",
         "views/property_tag/property_tag_main_action.xml",
-
+        "views/property_offer/tree_view.xml",
+        "views/property_offer/form_view.xml",
         "views/root_menu.xml",
-
     ],
 }
