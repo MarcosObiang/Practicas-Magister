@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+
+
+<odoo>
+    <data>
+        <record id="property_type_form_id" model="ir.ui.view">
+            <field name="name">Property form</field>
+            <field name="model">property_type</field>
+            <field name="arch" type="xml">
+                <form>
+                    <field name="property_ids">
+                        <tree>
+                            
+                           <field name="name"></field>
+                            <field name="description"></field>
+                            <field name="expected_price"></field>
+                            <field name="state" widget="statusbar"></field>
+
+
+                        </tree>
+
+                    </field>
+
+
+                </form>
+
+
+            </field>
+
+
+        </record>
+
+    </data>
+
+
+</odoo>

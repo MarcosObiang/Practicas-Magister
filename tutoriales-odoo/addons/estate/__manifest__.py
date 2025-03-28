@@ -18,6 +18,7 @@
         "views/estate/estate_property_views.xml",
         "views/property_type/settings_property_view.xml",
         "views/property_type/porperty_types_list.xml",
+        "views/property_type/property_type_form.xml",
         "views/property_tag/property_tag_field_list.xml",
         "views/property_tag/property_tag_main_action.xml",
         "views/property_offer/tree_view.xml",

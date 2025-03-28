@@ -9,17 +9,21 @@
             <field name="name">test_model</field>
             <field name="model">test_model</field>
             <field name="arch" type="xml">
-                <search string ="Busca tu casa">
+                <search string="Busca tu casa">
                     <field name="name" string="Name" />
                     <field name="postcode" string="Postcode" />
                     <field name="state" string="State" />
 
-                    <separator/>
-                    <filter string ="Propiedades disponibles" name ="state" domain="[ '|',('state','=', 'new'),('state','=','offer_recieved')]"></filter>
-                        <filter string = "Codigo postal" name="postcode" context="{'group_by':'postcode'}">
-                        
-                        </filter>
-             
+                    <separator />
+                    <filter string="Propiedades disponibles" name="state"
+                        domain="[ '|',('state','=', 'new'),('state','=','offer_recieved')]"></filter>
+                    <filter string="Codigo postal" name="postcode" context="{'group_by':'postcode'}">
+
+                    </filter>
+
+                    <filter name="living_area_filter" string="Living Area ≥ X"
+                        filter_domain="[ '|',('living_area','=', 'self'),('living_area','>','self')]" ></filter>
+
                 </search>
             </field>
         </record>

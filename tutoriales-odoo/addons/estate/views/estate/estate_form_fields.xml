@@ -7,7 +7,14 @@
             <field name="model">test_model</field>
 
             <field name="arch" type="xml">
-                <form string="Test">
+                <form string="Test" >
+                    <header>
+                        <button name="cancel_offer" type="object" string="Cancel"
+                            states="new,offer_recieved,offer_accepted" />
+                        <button name="sold_to_offer" type="object" string="Sell"
+                            states="new,offer_recieved,offer_accepted" />
+
+                    </header>
                     <sheet>
                         <group>
                             <field name="name" />
@@ -30,8 +37,11 @@
                                         <field name="living_area" />
                                         <field name="facades" />
                                         <field name="garage" />
-                                        <field name="garden_area" />
-                                        <field name="garden_orientation" />
+                                        <field name="garden" />
+                                        <field name="garden_area"
+                                            attrs="{'invisible':[('garden','=','False')]}" />
+                                        <field name="garden_orientation"
+                                            attrs="{ 'invisible':[('garden','=','False')]}" />
                                     </group>
                                 </page>
 
@@ -42,14 +52,14 @@
                                         <field name="buyer_id" />
                                         <field name="salesman_id" />
                                         <field name="property_type_id" />
-                                        <field name="property_tag_ids" widget="many2many_tags" />
-                                        <field name="offers_ids" widget="one2many_list" />
+                                        <field name="property_tag_ids" widget="many2many_tags"
+                                            options="{'color_field': 'color'}" />
                                     </group>
                                 </page>
 
                                 <page string="Offers">
 
-                                    <field name="offers_ids" widget="one2many_list" />
+                                    <field name="offers_ids" widget="one2many_list" attrs="{'readonly': [('state', 'in', ['offer_accepted', 'sold', 'canceled'])]}" />
                                 </page>
                             </notebook>
                         </group>

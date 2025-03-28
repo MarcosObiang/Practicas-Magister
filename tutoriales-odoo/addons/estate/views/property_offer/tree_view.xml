@@ -10,7 +10,7 @@
             <field name="arch" type="xml">
                 <tree>
 
-                    <field name="price" />
+                    <field name="price"/>
 
                     <field name="status" />
 
@@ -20,6 +20,11 @@
                     <field name="date_deadline" />
 
                     <field name="validity" />
+
+
+                    <button name="accept_offer" type="object" string="Accept"
+                        attrs="{'invisible': [('status', 'in', ['accepted', 'refused'])]}" />
+                    <button name="refuse_offer" type="object" string="Refuse" />
 
 
                 </tree>
