@@ -21,6 +21,8 @@
 
                     <field name="validity" />
 
+                    <field name="property_id" widget="many2one_tags" />
+
 
                     <button name="accept_offer" type="object" string="Accept"
                         attrs="{'invisible': [('status', 'in', ['accepted', 'refused'])]}" />

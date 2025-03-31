@@ -3,7 +3,13 @@
 <odoo>
 
     <data>
-        <menuitem id="test_menu_root" name="Menu">
+        <menuitem id="test_menu_root" name="Estates">
+
+            <menuitem id="test_first_level_menu_advertisements" name="Estates">
+
+                <menuitem id="test_model_menu_action_advertisements" action="test_model_action" />
+
+            </menuitem>
 
 
             <menuitem id="test_first_level_menu_settings" name="Properties">
@@ -15,11 +21,7 @@
             </menuitem>
 
 
-            <menuitem id="test_first_level_menu_advertisements" name="Estates">
-
-                <menuitem id="test_model_menu_action_advertisements" action="test_model_action" />
-
-            </menuitem>
+        
 
 
         </menuitem>

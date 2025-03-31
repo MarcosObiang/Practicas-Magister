@@ -25,6 +25,7 @@ class TestModel(models.Model):
     name = fields.Char("Name", required=True, translate=True)
     description = fields.Char("Description", required=True)
     postcode = fields.Char("Post code", required=True)
+    user_id = fields.Many2one("res.users", string="Usuario")
     date_availability = fields.Date(
         "Availability date",
         copy=False,
@@ -68,12 +69,26 @@ class TestModel(models.Model):
     offers_ids = fields.One2many(
         "estate_property_offers", "property_id", string="Offers"
     )
+
+    best_price = fields.Float(compute="compute_best_price", default=0)
     total_area = fields.Float(compute="compute_total_area")
 
     @api.depends("living_area")
     def compute_total_area(self):
         for record in self:
             record.total_area = record.living_area + record.garden_area
+
+    def _calcular_mejor_precio(self, ofertas):
+        mejor_precio = 0.0
+        for oferta in ofertas:
+            if oferta.price > mejor_precio:
+                mejor_precio = oferta.price
+        return mejor_precio
+
+    @api.depends("offers_ids.price")
+    def compute_best_price(self):
+        for record in self:
+            record.best_price = self._calcular_mejor_precio(record.offers_ids)
 
     @api.onchange("garden")
     def on_garden_change(self):
@@ -110,3 +125,30 @@ class TestModel(models.Model):
         for record in self:
             if record.state != "canecled":
                 record.state = "sold"
+
+    def onDelete(vals):
+        print(vals)
+
+    # @api.model
+    # def create(self, vals):
+
+    #     return super().create(vals)
+
+    # @api.model
+    # def read(self, vals):
+    #     return super().read(vals)
+
+    # @api.model
+    # def write(self, vals):
+    #     return super().write(vals)
+
+    # @api.model
+    # def unlink(self, vals):
+
+    #     return super().unlink(vals)
+
+    @api.ondelete(at_uninstall=False)
+    def _unlink_expect_active(self):
+
+        if any(record.state == "new" or record.state == "cancelled" for record in self):
+            raise Error("Cant delete a home with state 'new' or 'cancelled'")

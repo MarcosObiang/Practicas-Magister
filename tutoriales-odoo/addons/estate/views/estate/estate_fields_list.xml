@@ -6,7 +6,7 @@
             <field name="name">Test Tree View</field>
             <field name="model">test_model</field>
             <field name="arch" type="xml">
-                <tree string="Tests"  decoration-success="offers_ids">
+                <tree string="Tests" decoration-success="[('offers_ids', '=', [])]">
                     <!-- Campos básicos -->
                     <field name="name" />
                     <field name="description" />

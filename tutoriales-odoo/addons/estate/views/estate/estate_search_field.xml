@@ -13,6 +13,7 @@
                     <field name="name" string="Name" />
                     <field name="postcode" string="Postcode" />
                     <field name="state" string="State" />
+                    <field name="living_area" string="Living Area"     filter_domain="[ '|',('living_area','>', self),('living_area','>',self)]" />
 
                     <separator />
                     <filter string="Propiedades disponibles" name="state"
@@ -21,8 +22,7 @@
 
                     </filter>
 
-                    <filter name="living_area_filter" string="Living Area ≥ X"
-                        filter_domain="[ '|',('living_area','=', 'self'),('living_area','>','self')]" ></filter>
+
 
                 </search>
             </field>

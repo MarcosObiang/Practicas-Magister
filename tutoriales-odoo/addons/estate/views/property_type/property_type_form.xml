@@ -8,9 +8,13 @@
             <field name="model">property_type</field>
             <field name="arch" type="xml">
                 <form>
+
+                <header>
+                <button name = "%(estate.offer_view)d" type="action" string="Offers"></button>
+                </header>
                     <field name="property_ids">
                         <tree>
-                            
+
                            <field name="name"></field>
                             <field name="description"></field>
                             <field name="expected_price"></field>

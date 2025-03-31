@@ -35,7 +35,7 @@ services:
    
     volumes:
       - odoo_filestore:/var/lib/odoo/filestore
-      - /home/marcos/Practicas/tutoriales-odoo/addons/estate:/mnt/extra-addons/estate
+      - /home/marcos/Practicas/tutoriales-odoo/addons/:/mnt/extra-addons/
       - /home/marcos/Practicas/odoo_configuration/:/etc/odoo/
 
     depends_on:

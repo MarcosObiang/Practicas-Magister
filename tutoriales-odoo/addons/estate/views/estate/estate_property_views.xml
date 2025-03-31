@@ -6,8 +6,15 @@
         <record id="test_model_action" model="ir.actions.act_window">
             <field name="name">Test action</field>
             <field name="res_model">test_model</field>
-            <field name="view_mode">tree,form</field>
-         <field name="search_view_id" ref= "test_model_search"></field> 
+            <field name="view_mode">form,kanban</field>
+            <field name="search_view_id" ref="test_model_search"></field>
+
+
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    Create a new real estate property
+                </p>
+            </field>
         </record>
 
 
